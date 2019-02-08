@@ -1,0 +1,34 @@
+{
+  "name": "github-profiles",
+  "version": "1.0.0",
+  "description": "Simple app to test Github Rest API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "gulp": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sarkioja/superagendador-front-end-test.git"
+  },
+  "author": "Renan Cunha",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sarkioja/superagendador-front-end-test/issues"
+  },
+  "homepage": "https://github.com/sarkioja/superagendador-front-end-test#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-csslint": "^0.2.0",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-jshint": "^1.11.2",
+    "gulp-stylus": "^2.7.0",
+    "gulp-uglify": "^3.0.1",
+    "gulp-usemin": "^0.3.29",
+    "jshint-stylish": "^2.2.1"
+  }
+}
