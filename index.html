@@ -7,10 +7,203 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
   <link rel="stylesheet" href="src/assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
 
   <title>Github Profiles</title>
 </head>
 <body>
+
+  <header class="navbar">
+    <span class="navbar__logo">Github Logo</span>
+    <h1 class="navbar__title"><span class="navbar__title--bold">Github</span> profiles</h1>
+  </header>
+
+  <div class="container">
+    <section class="profile-panel">
+      <div class="profile-panel__img" ><img src="https://via.placeholder.com/85" alt="User Photo"></div>
+      <div class="profile-panel__details">
+        <h2 class="profile-panel__username">Roger Ramos</h2>
+        <h3 class="profile-panel__bio">Front End Dev and UI Designer</h3>
+      </div>
+    </section>
+
+
+    <main class="repos">
+      <div class="tabs">
+        <div class="tab--selected">
+          <a class="tab__title" href="#">Repos <span class="tab__counter">73</span></a>
+        </div>
+
+        <div class="tab">
+          <a class="tab__title" href="#">Starred <span class="tab__counter">5</span></a>
+        </div>
+      </div>
+
+      <div class="search">
+        <input class="search-bar" type="text" placeholder="Filter by name">
+      </div>
+
+      <ul class="list-itens">
+        <li class="list-item">
+          <h3 class="list-item__heading">
+            <a class="list-item__title" href="#">todo-backend</a>
+          </h3>
+          <p class="list-item__description">Simply to-do server based on Nodejs with Express and MongoDB</p>
+
+          <span class="list-item__text">
+            <span class="list-item__icon">
+              <img src="src/assets/img/icon-code@2x.png" alt="">
+            </span>
+            JavaScript
+          </span>
+
+          <span class="list-item__text">
+            <span class="list-item__icon">
+              <img src="src/assets/img/icon-fork@2x.png" alt="">
+            </span>
+            177
+          </span>
+        </li>
+
+
+        <li class="list-item">
+          <h3 class="list-item__heading">
+            <a class="list-item__title" href="#">dotfiles</a>
+          </h3>
+          <p class="list-item__description"></p>
+
+          <span class="list-item__text">
+            <span class="list-item__icon">
+              <img src="src/assets/img/icon-code@2x.png" alt="">
+            </span>
+            Vim Script
+          </span>
+
+          <span class="list-item__text">
+            <span class="list-item__icon">
+              <img src="src/assets/img/icon-fork@2x.png" alt="">
+            </span>
+            177
+          </span>
+        </li>
+
+
+        <li class="list-item">
+          <h3 class="list-item__heading">
+            <a class="list-item__title" href="#">react-udemy-course</a>
+          </h3>
+          <p class="list-item__description"></p>
+
+          <span class="list-item__text">
+            <span class="list-item__icon">
+              <img src="src/assets/img/icon-code@2x.png" alt="">
+            </span>
+            JavaScript
+          </span>
+        </li>
+
+        <li class="list-item">
+          <h3 class="list-item__heading">
+            <a class="list-item__title" href="#">console-logger</a>
+          </h3>
+          <p class="list-item__description">A beatiful to read console message</p>
+
+          <span class="list-item__text">
+            <span class="list-item__icon">
+              <img src="src/assets/img/icon-code@2x.png" alt="">
+            </span>
+            JavaScript
+          </span>
+
+          <span class="list-item__text">
+            <span class="list-item__icon">
+              <img src="src/assets/img/icon-fork@2x.png" alt="">
+            </span>
+            177
+          </span>
+        </li>
+      </ul>
+
+
+
+      <!-- Starred !-->
+      <ul class="list-itens">
+        <li class="list-item--starred">
+          <h3 class="list-item__heading">
+            <a class="list-item__title" href="#">
+              <span class="list-item__title--user">nodejs /</span>
+              Release
+            </a>
+          </h3>
+          <p class="list-item__description">Node.js Foundation Release Working Group</p>
+
+          <span class="list-item__text">
+            <span class="list-item__icon">
+              <img src="src/assets/img/icon-star@2x.png" alt="">
+            </span>
+            1,404
+          </span>
+
+          <span class="list-item__text">
+            <span class="list-item__icon">
+              <img src="src/assets/img/icon-fork@2x.png" alt="">
+            </span>
+            177
+          </span>
+        </li>
+
+
+        <li class="list-item">
+          <h3 class="list-item__heading">
+            <a class="list-item__title" href="#">
+              <span class="list-item__title--user">leocaseiro /</span>
+              angular-chosen
+            </a>
+          </h3>
+          <p class="list-item__description">AngularJS Chosen is an AngularJS Directive that brings the Chosen jQuery in a AngularJS way</p>
+
+          <span class="list-item__text">
+            <span class="list-item__icon">
+              <img src="src/assets/img/icon-star@2x.png" alt="">
+            </span>
+            1,404
+          </span>
+
+          <span class="list-item__text">
+            <span class="list-item__icon">
+              <img src="src/assets/img/icon-fork@2x.png" alt="">
+            </span>
+            177
+          </span>
+        </li>
+
+
+        <li class="list-item">
+          <h3 class="list-item__heading">
+            <a class="list-item__title" href="#">
+              <span class="list-item__title--user">LFeh /</span>
+              frontend-challenges
+            </a>
+          </h3>
+          <p class="list-item__description">Listing some playful open-source's challenges of jobs to test your knowledge</p>
+
+          <span class="list-item__text">
+            <span class="list-item__icon">
+              <img src="src/assets/img/icon-star@2x.png" alt="">
+            </span>
+            1,404
+          </span>
+
+        <span class="list-item__text">
+          <span class="list-item__icon">
+            <img src="src/assets/img/icon-fork@2x.png" alt="">
+          </span>
+          177
+        </span>
+        </li>
+      </ul>
+    </main>
+  </div>
 
   <script src="src/assets/js/main.js"></script>
 </body>
