@@ -17,6 +17,7 @@ $warm-grey = #999
 $rusty-orange = #e36209
 $dark-sky-blue = #3498db
 
+
 //Styles
 body
   background-color: $white
@@ -170,9 +171,10 @@ body
     margin: 2em 0 2em 2em
 
 .tab
-  padding: 1em 3em
+  padding: 1em 1.5em
   width: 50vw
   text-align: center
+  font-size: 1.1em
 
   +tablet()
     padding: 1em 2em
@@ -184,7 +186,7 @@ body
 
   +desktop-hd()
     padding: 1em 2em
-    width: 12em
+    width: 10em
 
   +desktop-fullhd()
     padding: 1em 2em
@@ -207,7 +209,7 @@ body
     display: inline-block
     width: 1.8em
     height: 1.5em
-    font-size: .75em
+    font-size: .85em
     font-weight: bold
     background-color: $grey
     padding .3em .4em
@@ -216,28 +218,34 @@ body
 
 // -- Search
 .search
-  margin: 2em 2em 0 2em
+  margin: 1.75em 2em 0 2em
 
 .search-bar
   border: 1.5px solid $light-grey
-  border-radius: .5em
+  border-radius: .3em
   color: $warm-grey
   font-family: inherit
   font-size: .9em
   line-height: 1em
   padding: .5em
-  padding-left: 3.5em
-  height: 3.5em
+  padding-left: 3em
+  height: 2.6em
   width: 95%
-  background url('../img/icon-search@3x.png') no-repeat
-  background-position 1em 0.9em
+  background url('../img/icon-search@2x.png') no-repeat
+  background-position 1em .75em
   outline: 0
 
   +tablet()
-    width: 25em
+    width: 22.55em
 
   +desktop()
-    width: 25em
+    width: 22.55em
+
+  +desktop-hd()
+    width: 22.55em
+
+  +desktop-fullhd()
+    width: 22.55em
 
   &:focus
     border: 1.5px solid $slate-grey-two
@@ -289,6 +297,11 @@ body
     line-height: 1.5em
     margin-bottom: .7em
 
+    &--starred
+      @extends .list-item__description
+      margin-top: .5em 
+      margin-bottom: 1.2em
+
   &__text
     margin-right: 1.2em
 
@@ -322,3 +335,4 @@ body
 
 .hide
   display: none
+  opacity: 0

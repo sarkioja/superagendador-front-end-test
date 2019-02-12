@@ -184,7 +184,7 @@ function listStarredRepos(sOwner, sName, sDescription, sUrl, sStars_count, sFork
   a.appendChild(textName);
 
   let p = document.createElement('p');
-  p.setAttribute('class', 'list-item__description');
+  p.setAttribute('class', 'list-item__description--starred');
   p.textContent = sDescription;
 
 

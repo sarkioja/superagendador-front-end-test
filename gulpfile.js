@@ -13,7 +13,6 @@ var gulp = require('gulp'),
 
 gulp.task('default', ['copy'], function() {
   gulp.start('usemin');
-  gulp.start('server');
 });
 
 gulp.task('copy', ['clean'], function() {
@@ -27,7 +26,7 @@ gulp.task('clean', function() {
 });
 
 gulp.task('usemin', function() {
-  return gulp.src('dist/*.html')
+  return gulp.src('index.html')
              .pipe(usemin({
                css: [autoprefixer, cssmin],
                js: [terser]
@@ -44,12 +43,14 @@ gulp.task('server', function() {
 
   gulp.watch('src/**/*').on('change', browserSync.reload);
 
+
   gulp.watch('src/assets/**/*.js').on('change', function(event) {
     console.log("Linting " + event.path);
     gulp.src(event.path)
         .pipe(jshint({esversion: 6}))
         .pipe(jshint.reporter(jshintStylish));
   });
+
 
   gulp.watch('src/assets/**/*.css').on('change', function(event) {
     console.log("Linting " + event.path);
