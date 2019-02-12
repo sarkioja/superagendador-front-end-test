@@ -11,7 +11,8 @@ var gulp = require('gulp'),
     jshintStylish = require('jshint-stylish'),
     csslint = require('gulp-csslint'),
     autoprefixer = require('gulp-autoprefixer'),
-    stylus = require('gulp-stylus');
+    stylus = require('gulp-stylus'),
+    surge = require('gulp-surge');
 
 gulp.task('default', ['copy'], function() {
   gulp.start('usemin');
@@ -49,6 +50,13 @@ gulp.task('server', function() {
       baseDir: './'
     }
   });
+
+gulp.task('deploy', [], function() {
+  return surge({
+    project: './',
+    domain: 'superagendador-test.surge.sh'
+  })
+});
 
   gulp.watch('src/**/*').on('change', browserSync.reload);
 

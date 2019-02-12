@@ -1,0 +1,324 @@
+//Reset
+@import _reset
+@import _media-queries
+
+// Colors
+$white = #fff
+$white-two = #e3e3e3
+$slate-grey = #5c646d
+$slate-grey-two = #586069
+$light-grey = #ccc
+$grey = #d8d8d8
+$pale-grey = #e1e4e8
+$dark-grey = #24292e
+$dark-grey-two = #282d32
+$brownish-grey = #666
+$warm-grey = #999
+$rusty-orange = #e36209
+$dark-sky-blue = #3498db
+
+//Styles
+body
+  background-color: $white
+  color: $slate-grey
+  font-family: 'Open Sans', sans-serif
+  font-size: 100%
+
+// -- Container
+.container
+  background-color: inherit
+
+  +desktop-hd()
+    display: flex
+    align-items: flex-start
+    justify-content: flex-start
+    padding: 0 1em
+
+  +desktop-fullhd()
+    display: flex
+    align-items: flex-start
+    justify-content: flex-start
+    padding: 0 1em
+
+// -- Navbar
+.navbar
+  height: 2.75em
+  background-color: $dark-grey
+  color: $white
+  font-size: 1.25em
+  padding: 1em 1.2em
+  display: flex
+  justify-content: flex-start
+  align-items: center
+
+  +desktop-hd()
+    padding: 1em 2em
+
+  +desktop-fullhd()
+    padding: 1em 2em
+
+  &__logo
+    width: 1.5em
+    height: 1.5em
+    background-image: url('../img/logo@3x.png')
+    background-repeat: no-repeat
+    background-position: center
+    background-size: cover
+    border-radius: 50%
+    text-indent: -9999px
+
+  &__title
+    margin-left: .5em
+
+    &--bold
+      font-weight: bold
+
+
+// -- Profile-Panel
+.profile-panel
+  background-color: $white
+  padding: 1.5em 1.2em
+  display: flex
+  justify-content: flex-start
+  align-items: flex-start
+
+  +desktop-hd()
+    align-items: center
+    justify-content: flex-start
+    flex-direction: column
+    flex-basis: 35vw
+    text-align: center
+    margin-bottom: 1em
+
+  +desktop-fullhd()
+    align-items: center
+    justify-content: flex-start
+    flex-direction: column
+    text-align: center
+    margin-bottom: 1em
+    flex-basis: 50vw
+
+  &__img
+    margin-right: .75em
+
+    +desktop-hd()
+      align-self: center
+      margin-right: 0
+
+    +desktop-fullhd()
+      align-self: center
+      margin-right: 0
+
+    > .profile-panel__user-img
+      border-radius: 50%
+      width: 5em
+
+      +desktop-hd()
+        width: 13em
+
+      +desktop-fullhd()
+        width: 15em
+
+  &__details
+    margin-left .75em
+
+      +desktop-hd()
+        margin-left: 0
+
+      +desktop-fullhd()
+        margin-left: 0
+
+  &__username
+    font-weight: bold
+    color: $dark-grey
+    font-size: 1.3em
+    line-height: 2.25em
+
+    +desktop-hd()
+      margin-top: 1em
+
+    +desktop-fullhd()
+      margin-top: 1em
+
+  &__bio
+    color: $brownish-grey
+    font-size: .9em
+
+// -- Tabs
+.tabs
+  border-bottom: 1px solid $pale-grey
+  display: flex
+  align-items: center
+  justify-content: space-around
+  flex-grow: 1
+  cursor: pointer
+
+  +tablet()
+    justify-content: flex-start
+
+  +desktop()
+    justify-content: flex-start
+
+  +desktop-hd()
+    width: 75vw
+    justify-content: flex-start
+    margin: 2em 0 2em 2em
+
+  +desktop-fullhd()
+    width: 75vw
+    justify-content: flex-start
+    margin: 2em 0 2em 2em
+
+.tab
+  padding: 1em 3em
+  width: 50vw
+  text-align: center
+
+  +tablet()
+    padding: 1em 2em
+    width: 10em
+
+  +desktop()
+    padding: 1em 2em
+    width: 10em
+
+  +desktop-hd()
+    padding: 1em 2em
+    width: 12em
+
+  +desktop-fullhd()
+    padding: 1em 2em
+    width: 12em
+
+  &--selected
+    @extends .tab
+    font-weight: bold
+    border-bottom: .3em solid $rusty-orange
+
+    > .tab__title
+      color: $dark-grey-two
+
+  &__title
+    text-decoration: none
+    color: $slate-grey-two
+    outline: 0
+
+  &__counter
+    display: inline-block
+    width: 1.8em
+    height: 1.5em
+    font-size: .75em
+    font-weight: bold
+    background-color: $grey
+    padding .3em .4em
+    border-radius: 50%
+    color: $slate-grey-two
+
+// -- Search
+.search
+  margin: 2em 2em 0 2em
+
+.search-bar
+  border: 1.5px solid $light-grey
+  border-radius: .5em
+  color: $warm-grey
+  font-family: inherit
+  font-size: .9em
+  line-height: 1em
+  padding: .5em
+  padding-left: 3.5em
+  height: 3.5em
+  width: 95%
+  background url('../img/icon-search@3x.png') no-repeat
+  background-position 1em 0.9em
+  outline: 0
+
+  +tablet()
+    width: 25em
+
+  +desktop()
+    width: 25em
+
+  &:focus
+    border: 1.5px solid $slate-grey-two
+
+// -- List Itens
+.list-itens
+  font-size: 0.9em
+  list-style-type: none
+
+.list-item
+  padding: 1.6em 2em
+  border-bottom: 1.5px solid $pale-grey
+
+  +tablet()
+    padding: 2.8em 2em
+
+  +desktop-hd()
+    margin-left: 2em
+    padding: 2.8em 0
+
+  +desktop-fullhd()
+    margin-left: 2em
+    padding: 2.8em 0
+
+  &:last-child
+    border-bottom: none
+    margin-bottom: 2em
+
+  &__heading
+    margin-bottom: .3em
+
+  &__title
+    color: $dark-sky-blue
+    font-size: 1.4em
+    font-weight: bold
+    line-height: 1.6em
+    text-decoration: none
+
+    &:hover
+      opacity: 0.7
+      transition: opacity .25s ease-in-out
+
+    &--user
+      @extends .list-item__title
+      font-size: 1em
+      font-weight: normal
+
+  &__description
+    line-height: 1.5em
+    margin-bottom: .7em
+
+  &__text
+    margin-right: 1.2em
+
+  &__icon
+    display: inline-block
+    text-indent: -9999px
+    //margin: .4em .25em 0 0
+    width: 1.2em
+    height: 1em
+    vertical-align: middle
+
+    &--code
+      @extends .list-item__icon
+      background url('../img/icon-code@2x.png') no-repeat
+      background-position: 0 .2em
+      margin-right: .25em
+
+    &--star
+      @extends .list-item__icon
+      background url('../img/icon-star@2x.png') no-repeat
+      height: 1.2em
+      margin-right: .25em
+
+    &--fork
+      @extends .list-item__icon
+      background url('../img/icon-fork@2x.png') no-repeat
+      height: 1.2em
+
+  &--starred
+    @extends .list-item
+
+.hide
+  display: none
