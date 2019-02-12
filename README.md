@@ -1,3 +1,10 @@
+# Instalação
+1. Clone o repositório
+2. No terminal digite: 
+  * npm install
+  * gulp server
+
+
 # Teste para vaga de front-end no SuperAgendador
 Este repositório tem como fim testar os candidatos para vaga de front-end developer no [SuperAgendador](https://superagendador.com.br).
 > Para esta vaga buscamos alguém apaixonado por JavaScript e atento aos detalhes!
