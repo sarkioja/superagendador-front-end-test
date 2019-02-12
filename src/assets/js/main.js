@@ -21,7 +21,7 @@ function getUser(user) {
     } else {
       console.log(xhr.responseText);
     }
-  }
+  };
   xhr.send();
 }
 
@@ -45,7 +45,7 @@ function getRepos(user) {
     } else {
       console.log(xhr.responseText);
     }
-  }
+  };
 
   xhr.send();
 }
@@ -75,7 +75,7 @@ function getStarredRepos(user) {
     } else {
       console.log(xhr.responseText);
     }
-  }
+  };
 
   xhr.send();
 }

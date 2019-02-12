@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="theme-color" content="#000">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link rel="stylesheet" href="assets/css/style.min.css"/>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+
+  <title>Github Profiles</title>
+</head>
+<body>
+
+  <header class="navbar">
+    <span class="navbar__logo">Github Logo</span>
+    <h1 class="navbar__title"><span class="navbar__title--bold">Github</span> profiles</h1>
+  </header>
+
+  <div class="container">
+    <section class="profile-panel">
+      <div class="profile-panel__img"><img class="profile-panel__user-img" src="https://via.placeholder.com/85" alt="User Photo"></div>
+      <div class="profile-panel__details">
+        <h2 class="profile-panel__username"></h2>
+        <h3 class="profile-panel__bio"></h3>
+      </div>
+    </section>
+
+
+    <main class="repos">
+      <div class="tabs">
+        <div class="tab tab--selected" id="tab-repos">
+          <a class="tab__title" href="#" id="link-repos" onClick="tabs(event)">Repos <span class="tab__counter tab__counter--repos">0</span></a>
+        </div>
+
+        <div class="tab" id="tab-starred">
+          <a class="tab__title" href="#" id="link-starred" onClick="tabs(event)">Starred <span class="tab__counter  tab__counter--starred">0</span></a>
+        </div>
+      </div>
+
+      <div class="search">
+        <input class="search-bar" type="text" id="search" onkeyup="search()" placeholder="Filter by name">
+      </div>
+
+      <!-- Repos -->
+        <ul class="list-itens list-itens--repos" id="repos">
+        </ul>
+
+      <!-- Starred !-->
+        <ul class="list-itens list-itens--starred hide" id="starred">
+        </ul>
+    </main>
+  </div>
+
+  <script src="assets/js/main.min.js"></script>
+</body>
+</html>

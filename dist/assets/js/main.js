@@ -1,4 +1,4 @@
-const userID = 'rodgerpaulo';
+const userID = 'sarkioja';
 getUser(userID);
 getRepos(userID);
 getStarredRepos(userID);
@@ -6,8 +6,8 @@ getStarredRepos(userID);
 
 // Get data from user
 function getUser(user) {
-  const xhr = new XMLHttpRequest();
-  const api = 'https://api.github.com/users/';
+  const xhr = new XMLHttpRequest(),
+        api = 'https://api.github.com/users/';
 
   xhr.open('GET', api+user, true);
 
@@ -21,15 +21,15 @@ function getUser(user) {
     } else {
       console.log(xhr.responseText);
     }
-  }
+  };
   xhr.send();
 }
 
 
 function getRepos(user) {
 
-  const xhr = new XMLHttpRequest();
-  const api = `https://api.github.com/users/${user}/repos?sort=updated`;
+  const xhr = new XMLHttpRequest(),
+        api = `https://api.github.com/users/${user}/repos?sort=updated`;
 
   xhr.open('GET', api, true);
 
@@ -45,7 +45,7 @@ function getRepos(user) {
     } else {
       console.log(xhr.responseText);
     }
-  }
+  };
 
   xhr.send();
 }
@@ -54,8 +54,8 @@ function getStarredRepos(user) {
   const tabStarredCounter = document.querySelector('.tab__counter--starred');
   let starsCounter= 0;
 
-  const xhr = new XMLHttpRequest();
-  const api = `https://api.github.com/users/${user}/starred`;
+  const xhr = new XMLHttpRequest(),
+        api = `https://api.github.com/users/${user}/starred`;
 
   xhr.open('GET', api, true);
 
@@ -75,7 +75,7 @@ function getStarredRepos(user) {
     } else {
       console.log(xhr.responseText);
     }
-  }
+  };
 
   xhr.send();
 }
@@ -85,10 +85,10 @@ function getStarredRepos(user) {
 
 function buildUser(user, bio, avatar, repoCounter) {
 
-  const elName = document.querySelector('.profile-panel__username');
-  const elBio = document.querySelector('.profile-panel__bio');
-  const elAvatar = document.querySelector('.profile-panel__user-img');
-  const elRepoCounter = document.querySelector('.tab__counter--repos');
+  const elName = document.querySelector('.profile-panel__username'),
+        elBio = document.querySelector('.profile-panel__bio'),
+        elAvatar = document.querySelector('.profile-panel__user-img'),
+        elRepoCounter = document.querySelector('.tab__counter--repos');
 
   elName.innerText = user;
   elBio.innerText = bio;
@@ -219,10 +219,10 @@ function listStarredRepos(sOwner, sName, sDescription, sUrl, sStars_count, sFork
 
 
 function tabs(e) {
-  const tabRepos = document.querySelector('#tab-repos');
-  const tabStarred = document.querySelector('#tab-starred');
-  const ulRepos = document.querySelector('#repos');
-  const ulStarred = document.querySelector('#starred');
+  const tabRepos = document.querySelector('#tab-repos'),
+        tabStarred = document.querySelector('#tab-starred'),
+        ulRepos = document.querySelector('#repos'),
+        ulStarred = document.querySelector('#starred');
 
   if (e.target.id == 'link-starred') {
 
@@ -237,4 +237,32 @@ function tabs(e) {
     ulStarred.classList.add('hide');
     ulRepos.classList.remove('hide');
   }
+}
+
+function search() {
+
+  const ulRepos = document.querySelector('#repos'),
+        ulStarred = document.querySelector('#starred'),
+        search = document.querySelector('#search'),
+        filter = search.value.toUpperCase();
+  let ul;
+
+  if (ulRepos.classList.contains('hide')) {
+    ul = ulStarred;
+  } else {
+    ul = ulRepos;
+  }
+
+  let li = ul.querySelectorAll('.list-item');
+
+  [...li].forEach(item => {
+    let h3 = item.childNodes[0],
+        searchText = h3.textContent || h3.innerText;
+
+    if (searchText.toUpperCase().indexOf(filter) > -1) {
+      item.classList.remove('hide');
+    } else {
+      item.classList.add('hide');
+    }
+  });
 }
