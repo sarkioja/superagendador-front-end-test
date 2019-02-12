@@ -227,23 +227,26 @@ body {
 @media screen and (min-width: 1201px) and (max-width: 1400px) {
   .profile-panel__img {
     align-self: center;
+    margin-right: 0;
   }
 }
 @media screen and (min-width: 1401px) {
   .profile-panel__img {
     align-self: center;
+    margin-right: 0;
   }
 }
-.profile-panel__img > img {
+.profile-panel__img > .profile-panel__user-img {
   border-radius: 50%;
+  width: 5em;
 }
 @media screen and (min-width: 1201px) and (max-width: 1400px) {
-  .profile-panel__img > img {
+  .profile-panel__img > .profile-panel__user-img {
     width: 13em;
   }
 }
 @media screen and (min-width: 1401px) {
-  .profile-panel__img > img {
+  .profile-panel__img > .profile-panel__user-img {
     width: 15em;
   }
 }
@@ -283,6 +286,7 @@ body {
   align-items: center;
   justify-content: space-around;
   flex-grow: 1;
+  cursor: pointer;
 }
 @media screen and (min-width: 641px) and (max-width: 800px) {
   .tabs {
@@ -355,6 +359,7 @@ body {
 .tab--selected__title {
   text-decoration: none;
   color: #586069;
+  outline: 0;
 }
 .tab__counter,
 .tab--selected__counter {
@@ -468,7 +473,58 @@ body {
   margin-right: 1.2em;
 }
 .list-item__icon,
-.list-item--starred__icon {
+.list-item--starred__icon,
+.list-item__icon--code,
+.list-item__icon--star,
+.list-item__icon--code--star,
+.list-item__icon--fork,
+.list-item__icon--code--fork,
+.list-item__icon--star--fork,
+.list-item__icon--code--star--fork {
   display: inline-block;
-  margin: 0.4em 0.25em 0 0;
+  text-indent: -9999px;
+  width: 1.2em;
+  height: 1em;
+  vertical-align: middle;
+}
+.list-item__icon--code,
+.list-item--starred__icon--code,
+.list-item__icon--code--code,
+.list-item__icon--star--code,
+.list-item__icon--code--star--code,
+.list-item__icon--fork--code,
+.list-item__icon--code--fork--code,
+.list-item__icon--star--fork--code,
+.list-item__icon--code--star--fork--code {
+  background: url("../img/icon-code@2x.png") no-repeat;
+  background-position: 0 0.2em;
+  margin-right: 0.25em;
+}
+.list-item__icon--star,
+.list-item--starred__icon--star,
+.list-item__icon--code--star,
+.list-item__icon--star--star,
+.list-item__icon--code--star--star,
+.list-item__icon--fork--star,
+.list-item__icon--code--fork--star,
+.list-item__icon--star--fork--star,
+.list-item__icon--code--star--fork--star {
+  background: url("../img/icon-star@2x.png") no-repeat;
+  height: 1.2em;
+  margin-right: 0.25em;
+}
+.list-item__icon--fork,
+.list-item--starred__icon--fork,
+.list-item__icon--code--fork,
+.list-item__icon--star--fork,
+.list-item__icon--code--star--fork,
+.list-item__icon--fork--fork,
+.list-item__icon--code--fork--fork,
+.list-item__icon--star--fork--fork,
+.list-item__icon--code--star--fork--fork {
+  background: url("../img/icon-fork@2x.png") no-repeat;
+  height: 1.2em;
+}
+.hide {
+  display: none;
 }

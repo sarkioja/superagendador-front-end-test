@@ -103,12 +103,15 @@ body
 
     +desktop-hd()
       align-self: center
+      margin-right: 0
 
     +desktop-fullhd()
       align-self: center
+      margin-right: 0
 
-    > img
+    > .profile-panel__user-img
       border-radius: 50%
+      width: 5em
 
       +desktop-hd()
         width: 13em
@@ -148,6 +151,7 @@ body
   align-items: center
   justify-content: space-around
   flex-grow: 1
+  cursor: pointer
 
   +tablet()
     justify-content: flex-start
@@ -197,6 +201,7 @@ body
   &__title
     text-decoration: none
     color: $slate-grey-two
+    outline: 0
 
   &__counter
     display: inline-block
@@ -289,7 +294,31 @@ body
 
   &__icon
     display: inline-block
-    margin: .4em .25em 0 0
+    text-indent: -9999px
+    //margin: .4em .25em 0 0
+    width: 1.2em
+    height: 1em
+    vertical-align: middle
+
+    &--code
+      @extends .list-item__icon
+      background url('../img/icon-code@2x.png') no-repeat
+      background-position: 0 .2em
+      margin-right: .25em
+
+    &--star
+      @extends .list-item__icon
+      background url('../img/icon-star@2x.png') no-repeat
+      height: 1.2em
+      margin-right: .25em
+
+    &--fork
+      @extends .list-item__icon
+      background url('../img/icon-fork@2x.png') no-repeat
+      height: 1.2em
 
   &--starred
     @extends .list-item
+
+.hide
+  display: none
